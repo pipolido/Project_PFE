@@ -1,0 +1,34 @@
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 4rem;
+    background-color: white;
+  }
+  
+  .feature-card {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .features {
+      grid-template-columns: 1fr;
+      padding: 2rem;
+    }
+  }

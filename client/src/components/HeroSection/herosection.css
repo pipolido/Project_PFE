@@ -1,0 +1,85 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    background-color: var(--background-color);
+    min-height: 80vh;
+  }
+  
+  .hero-content {
+    max-width: 500px;
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-text {
+    color: var(--secondary-color);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid #ddd;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    transform: none; /* Removes the rotation */
+    border: 1px solid lightgray; /* Light gray border */
+    border-radius: 8px; /* Softens the border corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  }
+  
+/*   
+  .hero-image img:hover {
+    transform: perspective(1000px) rotateY(0deg) scale(1.1);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+  } */
+  
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .hero-image {
+      margin-top: 2rem;
+    }
+  }

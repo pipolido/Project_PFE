@@ -1,0 +1,123 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 4rem;
+    background-color: white;
+  }
+  
+  .logo img {
+    width: 120px; /* Ajustez selon vos besoins */
+    height: auto; /* Garde le ratio d'aspect */
+}
+
+  
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  position: relative; /* Needed for positioning the pseudo-element */
+  padding-bottom: 5px; /* Adjust space between the text and the line */
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Start with no width */
+  height: 2px; /* Height of the line */
+  background-color: black; /* Line color */
+  transition: width 0.3s ease; /* Animation for line width */
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Expand the line on hover */
+}
+
+
+  
+  .search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      padding: 1rem 2rem;
+    }
+    
+    .nav-links {
+      display: none;
+    }
+  }
+
+
+/* auth div style  */
+
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 10vh;
+}
+
+button {
+  padding: 10px 20px;
+  border: 2px solid black;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 50px;
+  background: none;
+  color: black;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.register{
+  background-color:black;
+  border: 2px solid black;
+  color: white;
+}
+
+.register:hover{
+  background-color: white;
+  color: black;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  opacity: 0;
+ 
+}
+
+button:hover:before {
+  opacity: 1;
+  transform: scale(1.2);
+
+  
+}
